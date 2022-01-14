@@ -46,7 +46,7 @@ spec:
         volumes:
           - name: nfs
             persistentVolumeClaim:
-               claimName: {{ include "nfs-server-gcp.fullname" . }}
+              claimName: {{ include "nfs-server-gcp.fullname" . }}
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
